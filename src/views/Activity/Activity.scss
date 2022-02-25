@@ -1,0 +1,92 @@
+@import '@/assets/scss/vars/index.scss';
+
+.method {
+  padding-left: 4%;
+  padding-bottom: 5rem;
+  @media (max-width: 75em) {
+    padding-left: 0;
+  }
+}
+
+.method > .wrap {
+  width: 64.3%;
+  padding: 3rem 0 0;
+  @media (max-width: 75em) {
+    padding: 0 4%;
+    width: 100%;
+  }
+  @media (max-width: 40em) {
+    padding: 0 2.5rem;
+  }
+}
+
+.method .title {
+  @media (max-width: 75em) {
+    display: block;
+    margin: 2.5rem 0 1rem;
+  }
+}
+
+.method .content {
+  margin: auto;
+  padding: 6rem 1.5rem;
+  background-color: map-get($color, 'contentBG');
+  position: relative;
+}
+
+.method .subtitle,
+.method .text {
+  max-width: 740px;
+  margin: auto;
+}
+
+.method .text {
+  color: map-get($color, 'primary');
+  font-size: 1.8rem;
+  padding: 1.5rem 5% 5rem;
+  line-height: 1.5;
+  h3:first-child {
+    margin-top: 0;
+  }
+  .small_title {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    color: map-get($color, 'menuActive');
+  }
+  & > ul,
+  & > ol {
+    ol {
+      list-style: decimal;
+      padding-left: 2.5rem;
+    }
+    ul {
+      list-style: circle;
+      padding-left: 3rem;
+    }
+    a {
+      color: map-get($color, 'secondary');
+      display: inline;
+      word-wrap: break-word;
+    }
+  }
+  & > ul {
+    list-style: outside;
+    padding-left: 3rem;
+  }
+  & > ol {
+    list-style: cjk-ideographic;
+    list-style-position: inside;
+  }
+  li + li {
+    margin-top: 1rem;
+  }
+}
+
+.method .content .btns {
+  text-align: center;
+}
+
+.underline {
+  border-bottom: 0.2rem solid map-get($color, 'secondary');
+  line-height: 1.2;
+}

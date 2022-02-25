@@ -1,0 +1,162 @@
+@import '@/assets/scss/vars/index.scss';
+
+body {
+  background-image: none;
+}
+
+.home.container section .wrap {
+  margin: auto;
+  max-width: 1200px;
+  @media (max-width: 64em) {
+    max-width: none;
+  }
+}
+
+.kv {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f0f0e6;
+  background-image: url(~@/assets/images/index/kv-bg-pc-1.jpg);
+  background-size: 1920px;
+  background-position: top center;
+  @media (max-width: 64em) {
+    background-image: url(~@/assets/images/index/kv-pad-1.jpg);
+    background-size: 100%;
+    background-position: top center;
+  }
+  @media (max-width: 26.25em) {
+    background-image: url(~@/assets/images/index/title-m-1.png),
+      url(~@/assets/images/index/kv-bg-m-1.png),
+      url(~@/assets/images/index/kv-bg-m-2.png),
+      url(~@/assets/images/index/kv-bg-m-3.png);
+    background-position: center center, top center, bottom center, top center;
+    background-size: 100% auto, 100% auto, 100% auto, 100% auto;
+  }
+  @media (max-height: 33.75em) and (max-width: 26.25em) {
+    background-image: url(~@/assets/images/index/kv-pad-1.jpg);
+    background-size: 100%;
+    background-position: top center;
+  }
+}
+
+.kv .wrap {
+  position: relative;
+  max-width: 1400px;
+  height: 50rem;
+  padding-bottom: 0;
+  overflow: hidden;
+  @media (max-width: 64em) {
+    width: 100%;
+    height: 0;
+    padding-bottom: 83.7890625%;
+  }
+  @media (max-width: 26.25em) {
+    max-width: none;
+    width: 100%;
+    height: 0;
+    padding-bottom: 55vh;
+  }
+  @media (max-height: 33.75em) and (max-width: 26.25em) {
+    width: 100%;
+    height: 0;
+    padding-bottom: 83.0075125%;
+  }
+}
+
+.banner {
+  position: absolute;
+  top: 33rem;
+  left: 17.33%;
+  @media (max-width: 64em) {
+    width: 28.8085%;
+    top: 52.246vw;
+    left: 20.2148vw;
+  }
+  @media (max-width: 26.25em) {
+    width: 46.09%;
+    top: 50%;
+    left: 9%;
+    transform: translate(0, 80%);
+  }
+  @media (max-height: 33.75em) and (max-width: 26.25em) {
+    width: 46.484375%;
+    max-width: 476px;
+    top: 40.32%;
+    left: 3.8125%;
+  }
+}
+
+.kv .login {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  left: -2rem;
+  display: none;
+  &.active {
+    display: block;
+  }
+  @media (max-width: 64em) {
+    left: 0;
+  }
+  @media (max-width: 26.25em) {
+    width: 65.432%;
+  }
+}
+
+.kv .login_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.kv .login_btns a {
+  width: 33.96%;
+  height: 0;
+  padding-bottom: 33.96%;
+  @extend %bg-cover;
+  cursor: pointer;
+  @media (min-width: 64em) {
+    width: 8.4rem;
+    height: 8.4rem;
+    padding-bottom: 0;
+  }
+}
+
+.kv .login_btns a + a {
+  margin-left: 12.075%;
+  @media (min-width: 64em) {
+    margin-left: 3rem;
+  }
+}
+
+#fb_login {
+  background-image: url(~@/assets/images/btn-fb-1.png);
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  &.active {
+    opacity: 1;
+  }
+}
+
+#google_login {
+  background-image: url(~@/assets/images/btn-google-1.png);
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  &.active {
+    opacity: 1;
+  }
+}
+
+.kv .login_text {
+  width: 100%;
+  height: 0;
+  padding-bottom: 14.62%;
+  background-image: url(~@/assets/images/index/kv-small-text-m-1.png);
+  @extend %bg-cover;
+  @media (min-width: 64em) {
+    padding-bottom: 14.5762%;
+    background-image: url(~@/assets/images/index/kv-small-text-pc-1.png);
+  }
+}

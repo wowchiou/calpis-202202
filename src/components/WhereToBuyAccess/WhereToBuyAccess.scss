@@ -1,0 +1,33 @@
+@import '@/assets/scss/vars/index.scss';
+
+.channels .content .access {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 0 2rem;
+  & + .access {
+    margin-top: 3rem;
+  }
+  .type {
+    font-size: 2.6rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    padding-right: 1.5rem;
+    margin-right: 1.5rem;
+    border-right: 1px solid map-get($color, 'primary');
+    line-height: 1;
+    min-width: 17.5rem;
+    text-align: right;
+    span {
+      transform: translateY(-0.1rem);
+      display: inline;
+      width: 100%;
+    }
+  }
+  .store {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+}

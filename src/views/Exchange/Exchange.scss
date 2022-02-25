@@ -1,0 +1,31 @@
+@import '@/assets/scss/vars/index.scss';
+
+.gift .content .page {
+  max-width: 740px;
+  width: 92.5%;
+  margin: auto;
+  @media (max-width: 40em) {
+    width: 95%;
+  }
+}
+
+#exchange_error_popup {
+  // display: block;
+  .popup_header span,
+  .popup_body span {
+    display: block;
+  }
+}
+
+#exchange_success_popup {
+  // display: block;
+  .popup_body span {
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    &:last-child {
+      color: map-get($color, 'light');
+      margin-top: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,173 @@
+@import '@/assets/scss/vars/index.scss';
+
+.mycode .code_content .content {
+  padding: 5rem 0;
+  min-height: 70vh;
+}
+
+.code_btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  .code_btn {
+    width: 17.5rem;
+    text-align: center;
+    border-radius: 1rem;
+    span {
+      transform: translateY(-0.1rem);
+    }
+    a {
+      font-size: 2rem;
+      color: #fff;
+      background-color: #b4b4b4;
+      width: 100%;
+      padding: 0.5rem 0;
+      letter-spacing: 2px;
+      padding-left: 2px;
+      font-weight: 300;
+    }
+    &.active {
+      a {
+        background-color: map-get($color, 'primary');
+        color: #ffe505;
+        font-weight: 500;
+      }
+    }
+  }
+  .code_btn + .code_btn {
+    margin-left: 2rem;
+    @media (max-width: 22.0625em) {
+      margin-left: 0;
+    }
+  }
+}
+
+.mycode .content .small_text {
+  text-align: center;
+  font-size: 2.4rem;
+  color: map-get($color, 'primary');
+  font-weight: 400;
+  letter-spacing: 2px;
+  padding-left: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.mycode .content .point_details {
+  font-size: 2rem;
+  font-weight: 500;
+  color: map-get($color, 'primary');
+  text-align: center;
+  width: 85%;
+  max-width: 740px;
+  margin: 0 auto 1.5rem;
+  text-align: left;
+  padding: 1rem 2rem;
+  background-color: #dcdcdc;
+  text-align: center;
+  border-radius: 0.5rem;
+  @media (max-width: 40em) {
+    width: 92.5%;
+  }
+  @media (max-width: 22.0625em) {
+    width: 95%;
+  }
+  .text {
+    width: auto;
+    display: inline-block;
+    text-align: left;
+    & > p {
+      display: block;
+      letter-spacing: 2px;
+      padding-left: 2px;
+      line-height: 1.5;
+      span {
+        color: #d61518;
+        margin: 0 0.5rem;
+      }
+    }
+  }
+}
+
+.tab_page {
+  margin: 0 auto 0;
+  max-width: 740px;
+  width: 85%;
+
+  @media (max-width: 40em) {
+    width: 92.5%;
+  }
+  @media (max-width: 22.0625em) {
+    width: 95%;
+  }
+
+  &.zero {
+    .zero_text {
+      padding-top: 2rem;
+    }
+  }
+  span {
+    letter-spacing: 2px;
+    padding-left: 2px;
+    @media (max-width: 40em) {
+      letter-spacing: 1px;
+      padding-left: 1px;
+    }
+  }
+  .zero_text {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .th {
+    font-size: 2rem;
+    @media (max-width: 22.5em) {
+      font-size: 16px;
+    }
+  }
+  .td {
+    font-size: 1.8rem;
+    @media (max-width: 22.5em) {
+      font-size: 12px;
+    }
+  }
+  .row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+  }
+  .grid {
+    position: relative;
+    color: map-get($color, 'primary');
+    & + .grid::after {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 70%;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      background-color: #cacac9;
+    }
+  }
+}
+
+.tab_page .th .grid {
+  background-color: map-get($color, 'primary');
+  color: #fff;
+}
+
+.tab_page .td .row {
+  border: 1px solid map-get($color, 'primary');
+  margin-top: 0.6rem;
+  &:nth-child(even) {
+    background-color: #dcdcdc;
+  }
+}
+
+.zero_text {
+  display: inline-block;
+  width: 100%;
+  color: map-get($color, 'primary');
+  text-align: center;
+}

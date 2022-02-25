@@ -1,0 +1,14 @@
+// 取顏色
+@function getColor($key) {
+  @return map-get($color, $key);
+}
+
+// 取的斷點值
+@function getBreakPoint($key) {
+  @return map-get($break-point, $key);
+}
+
+// 取得字體粗度值
+@function getFontWeight($key) {
+  @return map-get($font-weight, $key);
+}
