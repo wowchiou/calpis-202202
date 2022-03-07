@@ -1,9 +1,11 @@
 # 可爾必思 2022 序號登錄活動
 使用 Vue 搭配 Google、Facebook api 製作序號登錄活動網頁
 
-技術：Vue3、vue-cli4、vuex、scss、RWD、Google api、Facebook api
+技術：<br>
+Vue3、vue-cli4、vuex、scss、RWD、Google api、Facebook api
 
-網站：https://www.asahisoftdrinks.com.tw/calpishappykid2022/
+網站：<br>
+https://www.asahisoftdrinks.com.tw/calpishappykid2022/
 
 首頁
 ![1](https://user-images.githubusercontent.com/42172531/156995796-b1e32bdb-869b-419f-a317-9f8a354f3674.png)
