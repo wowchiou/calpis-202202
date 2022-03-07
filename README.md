@@ -4,11 +4,11 @@
 技術：<br>
 Vue3、vue-cli4、vuex、scss、RWD、Google api、Facebook api
 
-程式碼：<br>
-https://github.com/wowchiou/calpis-202202
-
 網站：<br>
 https://www.asahisoftdrinks.com.tw/calpishappykid2022/
+
+程式碼：<br>
+https://github.com/wowchiou/calpis-202202
 
 首頁
 ![1](https://user-images.githubusercontent.com/42172531/156995796-b1e32bdb-869b-419f-a317-9f8a354f3674.png)
