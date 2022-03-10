@@ -1,4 +1,6 @@
 # 可爾必思 2022 序號登錄活動
+nodejs-version：
+
 使用 Vue 搭配 Google、Facebook api 製作序號登錄活動網頁
 
 技術：<br>
