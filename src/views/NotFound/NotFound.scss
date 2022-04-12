@@ -1,0 +1,25 @@
+@import '@/assets/scss/vars/index.scss';
+
+.notFound {
+  text-align: center;
+  color: map-get($color, 'primary');
+  h2 {
+    font-size: 5rem;
+    font-weight: 700;
+  }
+  p {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.notFound > .wrap {
+  width: 100%;
+  padding: 3rem;
+}
+
+.notFound .content {
+  margin: auto;
+  padding: 6rem 1.5rem;
+  position: relative;
+}

@@ -1,0 +1,132 @@
+@import '@/assets/scss/vars/index.scss';
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0;
+  background-color: map-get($color, 'headerBG');
+  @media (max-width: 77.5em) {
+    padding: 0 2.5rem;
+  }
+  @media (max-width: 75em) {
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.header > .wrap {
+  margin: auto;
+  position: relative;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  z-index: 1;
+  @media (max-width: 75em) {
+    max-width: none;
+    display: block;
+    height: 100%;
+  }
+}
+
+.header .top {
+  height: 7.6rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  @media (max-width: 75em) {
+    width: 100%;
+    background-color: map-get($color, 'headerBG');
+  }
+}
+
+.header .logo {
+  @extend %bg-cover;
+  width: 24.1rem;
+  height: 4.2rem;
+  background-image: url(~@/assets/images/logo-2.png);
+  @media (max-width: 75em) {
+    top: auto;
+  }
+  @media (max-width: 40em) {
+    background-image: url(~@/assets/images/logo.png);
+    background-size: 100% 100%;
+  }
+}
+
+.header .menu_open {
+  width: 5.5rem;
+  height: 4.1rem;
+  @extend %bg-cover;
+  background-image: url(~@/assets/images/menu-1.png);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 2.5rem;
+  transform: translate(0, -50%) scale(0.75);
+  display: none;
+  @media (max-width: 75em) {
+    display: block;
+  }
+}
+
+.header.active {
+  .menu {
+    display: block;
+  }
+  .menu_open {
+    display: none;
+  }
+  @media (max-width: 75em) {
+    height: 100%;
+  }
+}
+
+.menu {
+  display: block;
+  height: auto;
+  background-color: transparent;
+  width: auto;
+  overflow: visible;
+  @media (max-width: 75em) {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: calc(100% - 7.6rem);
+    overflow: auto;
+    width: 100%;
+  }
+}
+
+.menu .wrap {
+  text-align: center;
+  position: relative;
+  min-height: none;
+  height: 100%;
+  @media (max-width: 75em) {
+    min-height: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.menu_close {
+  width: 3rem;
+  height: 3rem;
+  background-image: url(~@/assets/images/close-1.png);
+  @extend %bg-cover;
+  cursor: pointer;
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  display: none;
+  @media (max-width: 75em) {
+    display: block;
+  }
+}

@@ -1,0 +1,70 @@
+%pdo {
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+%center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+%bg-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+%underline {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background: -moz-linear-gradient(
+    left,
+    rgba(36, 86, 57, 0) 0%,
+    rgba(36, 86, 57, 1) 50%,
+    rgba(36, 86, 57, 0) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    rgba(36, 86, 57, 0) 0%,
+    #ff7b00 50%,
+    rgba(36, 86, 57, 0) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    rgba(36, 86, 57, 0) 0%,
+    rgba(36, 86, 57, 1) 50%,
+    rgba(36, 86, 57, 0) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ff7b00', endColorstr='#00ff7b00',GradientType=1 ); /* IE6-9 */
+  z-index: 1;
+}
+
+%btn-bg {
+  border-radius: 1rem;
+  background-color: map-get($color, "primary");
+}
+
+%btn-border {
+  border-radius: 1rem;
+  background-color: map-get($color, "primary");
+}
+
+%popup-border {
+  background-color: map-get($color, "primary");
+}

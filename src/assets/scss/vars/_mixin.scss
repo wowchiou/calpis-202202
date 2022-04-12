@@ -1,0 +1,27 @@
+// 通用flex排版
+@mixin flex($h, $v) {
+  display: flex;
+
+  @if $h == left {
+    justify-content: flex-start;
+  } @else if $h == right {
+    justify-content: flex-end;
+  } @else {
+    justify-content: $h;
+  }
+
+  @if $v == top {
+    align-items: flex-start;
+  } @else if $v == bottom {
+    align-items: flex-end;
+  } @else {
+    align-items: $v;
+  }
+}
+
+// 通用斷點設定
+@mixin media($device) {
+  @media #{getBreakPoint($device)} {
+    @content;
+  }
+}

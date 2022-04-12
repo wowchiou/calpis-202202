@@ -1,0 +1,181 @@
+@import '@/assets/scss/vars/index.scss';
+
+.header .sub_menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: map-get($color, 'secondary');
+  padding: 0 1rem;
+  display: none;
+  li + li {
+    border-top: 1px solid rgba(255, 255, 255, 1);
+  }
+  a {
+    font-size: 1.5rem;
+    padding: 2rem 0;
+    background: none;
+    border: none;
+    span {
+      letter-spacing: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+.menu .content {
+  position: relative;
+  height: 100%;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+  border-radius: 2rem;
+  @media (max-width: 75em) {
+    display: block;
+    background-color: #f0f0e6;
+    padding: 6rem 2.5rem 2.5rem;
+    margin: 7rem auto;
+    height: auto;
+    border: 4px solid map-get($color, 'slideBorder');
+  }
+  & > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    @media (max-width: 75em) {
+      display: block;
+      height: auto;
+    }
+    & > .btn {
+      width: auto;
+      border-radius: 0;
+      background: none;
+      height: 100%;
+      overflow: visible;
+      position: relative;
+      @media (max-width: 75em) {
+        overflow: hidden;
+        width: 27rem;
+        display: block;
+        border-radius: 0.5rem;
+        &#sign_out {
+          & > a {
+            background-color: map-get($color, 'slideBorder');
+          }
+        }
+      }
+      & > a {
+        background: none;
+        font-size: 2rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+        font-weight: 500;
+        color: map-get($color, 'primary');
+        border: none;
+        border-radius: 0;
+        @media (max-width: 75em) {
+          background-color: map-get($color, 'primary');
+          display: block;
+          font-size: 2.4rem;
+          color: #fff;
+          width: 100%;
+          height: 100%;
+          line-height: 1.5;
+        }
+        @media (max-width: 40em) {
+          span {
+            font-size: 2.6rem;
+          }
+        }
+        &.router-link-active {
+          color: map-get($color, 'menuActive');
+          @media (max-width: 75em) {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 75em) {
+  .menu .content > ul > .btn:hover {
+    background-color: map-get($color, 'secondary');
+    a {
+      color: #fff;
+    }
+    .sub_menu {
+      display: block;
+    }
+  }
+}
+
+.menu .content .btn i {
+  margin-left: 0.5rem;
+  display: inline-block;
+
+  @media (max-width: 75em) {
+    display: none;
+  }
+}
+
+.menu .content li:not(:last-child) {
+  margin-top: 0;
+
+  @media (max-width: 75em) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.menu .content .fans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.75rem;
+  @media (max-width: 75em) {
+    padding: 0;
+  }
+}
+
+.menu .content .fans a {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  @media (max-width: 75em) {
+    width: 7.2rem;
+    height: 7.2rem;
+  }
+  &.fans_fb {
+    background-image: url(~@/assets/images/icon-fb-1.png);
+    @media (max-width: 75em) {
+      background-image: url(~@/assets/images/icon-fb-2.png);
+    }
+  }
+  &.fans_ig {
+    background-image: url(~@/assets/images/icon-ig-1.png);
+    @media (max-width: 75em) {
+      background-image: url(~@/assets/images/icon-ig-2.png);
+    }
+  }
+  &.fans_official-website {
+    background-image: url(~@/assets/images/icon-official-web-1.png);
+    @media (max-width: 75em) {
+      background-image: url(~@/assets/images/icon-official-web-2.png);
+    }
+  }
+  & + a {
+    margin-left: 0.3rem;
+    @media (max-width: 75em) {
+      margin-left: 2.5rem;
+    }
+  }
+}

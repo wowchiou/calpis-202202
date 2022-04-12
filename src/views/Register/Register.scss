@@ -1,0 +1,10 @@
+@import '@/assets/scss/vars/index.scss';
+
+.registered .msg {
+  font-size: 2rem;
+  color: #d61518;
+  text-align: center;
+  span {
+    font-weight: 500;
+  }
+}

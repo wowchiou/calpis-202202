@@ -1,0 +1,13 @@
+@import '@/assets/scss/vars/index.scss';
+
+.comingSoon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+  h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: map-get($color, 'primary');
+  }
+}

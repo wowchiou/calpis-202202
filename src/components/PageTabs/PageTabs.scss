@@ -1,0 +1,35 @@
+@import '@/assets/scss/vars/index.scss';
+
+.tabs {
+  display: none;
+  @media (max-width: 75em) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.tab {
+  text-align: center;
+  flex: 1;
+  padding: 1rem 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  & + .tab {
+    margin-left: 2px;
+  }
+  span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #787878;
+    letter-spacing: 2px;
+    padding-left: 2px;
+  }
+}
+
+.tab.router-link-active {
+  background-color: map-get($color, 'contentBG');
+  padding-bottom: calc(1rem + 2px);
+  span {
+    color: map-get($color, 'primary');
+  }
+}
